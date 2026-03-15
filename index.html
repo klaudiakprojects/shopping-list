@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Shopping List</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f6; padding: 30px; }
+        .container { max-width: 500px; margin: auto; }
+        h1 { text-align: center; }
+        .input-group { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: flex; gap: 10px; margin-bottom: 30px; }
+        input, select { padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        button#add-btn { background: #4f46e5; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; }
+        
+        .category-folder { background: white; margin-bottom: 20px; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .folder-header { background: #eef2ff; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e0e7ff; }
+        .folder-header h3 { margin: 0; font-size: 16px; color: #3730a3; }
+        
+        ul { list-style: none; padding: 0; margin: 0; }
+        li { padding: 12px 20px; border-bottom: 1px solid #f3f4f6; display: flex; justify-content: space-between; align-items: center; }
+        li.done span { text-decoration: line-through; color: #9ca3af; }
+        
+        .btn-folder-delete { background: none; border: none; color: #ef4444; cursor: pointer; font-size: 12px; }
+        .btn-done { color: #10b981; border: none; background: none; cursor: pointer; font-size: 18px; }
+        .btn-delete { color: #f87171; border: none; background: none; cursor: pointer; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✨ Shopping list ✨</h1>
+        <div class="input-group">
+            <input type="text" id="input-item-name" placeholder="Item name...">
+            <select id="category-select">
+                <option value="Grocery">🛒 Grocery</option>
+                <option value="Beauty">💄 Beauty</option>
+                <option value="Home">🏠 Home</option>
+                <option value="Pharmacy">💊 Pharmacy</option>
+                <option value="Other">✨ Other</option>
+            </select>
+            <button id="add-btn">Add</button>
+        </div>
+        <div id="list-container"></div>
+    </div>
+    <script type="module" src="./ui/app.ts"></script>
+</body>
+</html>
