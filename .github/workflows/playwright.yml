@@ -24,7 +24,7 @@ jobs:
 
     - name: Get Playwright version
       id: playwright-version
-      run: echo "PLAYWRIGHT_VERSION=$(node -e "print(require('@playwright/test/package.json').version)")" >> $GITHUB_ENV
+      run: echo "PLAYWRIGHT_VERSION=$(node -e "console.log(require('@playwright/test/package.json').version)")" >> $GITHUB_ENV
 
     - name: Cache Playwright Browsers
       uses: actions/cache@v4
